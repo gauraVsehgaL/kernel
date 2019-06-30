@@ -38,6 +38,8 @@ CallDriverToCreateApc()
 	std::wcout << L"Successfully sent data to driver from CreateApc. Now waiting.\n";
 
 	//	apc is created for this thread. Now after the apc is queued this thread should be in alertable wait state for apc to be delivered.
+	//      apc will be qeueued in any sort of sleep
+	//      but will be delivered only if alertable sleep.
 	std::wcout << "Before normal sleep\n";
 	Sleep(15000);
 	std::wcout << "Before sleeping with alertable";
